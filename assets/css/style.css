@@ -1,0 +1,610 @@
+/* ======================================================
+ * New format
+ * ======================================================*/
+body {
+   /* For showing gradient effects without blocked by html background */
+    min-height: 400px;
+    /* font: 18px/25px Helvetica, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei; */
+    /* font: 18px/25px'Palatino', 'Palatino Linotype', 'Georgia', serif, Fangsong, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei; */
+    margin: 0;
+    padding: 0;
+    color: #3C3C3C;
+}
+
+/* font for body */
+body, textarea{
+    font-family: Avenir, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+}
+
+
+/* font for all links */
+a {
+    font-family: 'Palatino', 'Palatino Linotype', 'Georgia', Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, serif;
+    font-size: 18px;
+}
+
+.post-entry {
+    margin: 25px 0px;
+    color: #6F6F6F;
+}
+
+.post-entry:hover {
+    color: #444;
+    transition: color 0.2s linear 0s;
+}
+
+/*.info {*/
+    /*position: relative;*/
+    /*display: inline-block;*/
+    /*width: 80%;*/
+/*}*/
+
+/*.num-of-comments {*/
+    /*float: left;*/
+    /*display: inline-block;*/
+    /*width: 20%;*/
+/*}*/
+
+/*.post-entry .title {*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.post-entry .tags {*/
+    /*float: right;*/
+/*}*/
+
+/*.post-entry .tags:after {*/
+    /*content: "";*/
+    /*border-bottom: 1.5px solid #BBB;*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*left: 0px*/
+/*}*/
+
+/*.post-entry .tags ul {*/
+    /*margin: 0px;*/
+    /*padding: 0px;*/
+/*}*/
+
+/*.post-entry .tags li {*/
+    /*text-decoration: none;*/
+    /*list-style: none;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.post-entry time {*/
+    /*float: right;*/
+    /*clear: both;*/
+    /*font-size: 0.9em;*/
+/*}*/
+
+/*.post-entry .description {*/
+    /*padding-right: 120px;*/
+    /*font-size: 0.9em;*/
+/*}*/
+
+
+#main a {
+    text-decoration: none;
+    color: rgb(30, 70, 180);
+}
+
+#main a:hover, 
+.social a:hover,
+nav a:hover,
+.scroll a:hover
+{
+    background-color: #777;
+    color: #FCFCFA;
+}
+
+/*.post-entry .tags a {*/
+    /*padding-top: 0.5ex;*/
+    /*padding-left: 0.2ex;*/
+    /*padding-right: 0.2ex;*/
+    /*border-radius: 2px 2px 0px 0px;*/
+    /*border: 0.5px solid #BBB;*/
+/*}*/
+
+/*.post-entry .tags a:hover {*/
+    /*background-color: #CCC;*/
+/*}*/
+
+.container {
+    margin: 0px auto;
+    padding: 0;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.pull-left {
+    float:left;
+}
+.pull-right {
+    float:right;
+}
+
+/* Style for footer */
+.footer {
+    border-top: 1px dotted #ddd;
+    padding-top: 20px;
+    margin-top:15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+}
+.footer a {
+    color: #777;
+}
+.footer p {
+    margin: 0;
+    line-height: 40px;
+}
+
+.social a {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 15px 5px;
+}
+.social ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+}
+.social ul li {
+    display: inline;
+    margin: 0 2px;
+    padding: 0;
+}
+
+.social a, .scroll a {
+  display: inline-block;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top:15px;
+    position: fixed;
+    z-index: 199;
+    display: block;
+    opacity: 1;
+}
+
+.header .container {
+    position: relative;
+}
+
+/* scroll to top */
+.scroll {
+    position: absolute;
+    z-index: 20;
+    left: 0px;
+}
+
+.scroll a {
+    text-decoration: none;
+    padding: 18px 15px 15px;
+    margin-top: -15px;
+}
+
+.scroll a, .brand a {
+    font-size: 28px;
+    line-height: 17px;
+}
+
+
+.header.transparent {
+    background: transparent;
+}
+
+
+.dynamic .scroll,
+nav {
+    opacity: 1;
+}
+
+.dynamic .scroll,
+nav {
+    opacity: 1;
+}
+.scroll,
+.dynamic nav{
+    opacity: 0;
+}
+
+/* navigation links */
+nav {
+    position: absolute;
+    right: 0px;
+    z-index: 40;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 12px 8px 9px;
+}
+
+nav a,
+.scroll a {
+    color: #777;
+}
+
+nav,
+.scroll,
+.brand {
+    vertical-align: top;
+}
+
+.scroll,
+nav,
+.brand {
+    transition: left 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s, color 0.5s ease-in-out 0s;
+}
+
+/* brand banner */
+.brand {
+    position: absolute;
+    left: 0px;
+    z-index: 50;
+    width: 35%;
+    text-align: left;
+}
+
+.dynamic .brand {
+    left: 65%;
+    text-align: right;
+}
+
+/* separator */
+.separator {
+    border-bottom: 1px dotted #ddd;
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+}
+
+.header.transparent .separator {
+    background: transparent;
+    opacity: 0;
+}
+
+.header .separator {
+    padding-bottom: 35px;
+    margin-bottom: 0px;
+}
+
+/* offseting anchor tag link */
+:target:before {
+    content:"";
+    display:block;
+    height:50px; /* fixed header height*/
+    margin:-50px 0 0; /* negative fixed header height */
+}
+
+/* Article */
+
+/* meta align middle */
+.meta {
+    display: table;
+    width: 100%;
+}
+
+.meta .left{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.meta .right{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.meta .tags {
+    opacity: 0.7;
+    transition: opacity 0.2s linear 0s;
+}
+.meta .tags:hover {
+    opacity: 1;
+}
+
+.meta a {
+    text-decoration: none;
+}
+
+
+/* Main contents */
+/* table of contents */
+div.topic {
+    border-left: solid;
+    padding-left: 2em;
+}
+
+div.authordate {
+    font-size: 0.9em;
+}
+
+div.authordate time{
+    padding: 0px 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Palatino', 'Palatino Linotype', 'Georgia', Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, serif;
+}
+
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5,
+.section h6 {
+    border-bottom: 1px solid #AAA;
+}
+
+
+
+
+.body {
+    clear: both;
+    font-size: 1.1em;
+}
+
+/* code blocks */
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+pre {
+    padding: 10px;
+    margin: 7px 0px 10px;
+    border: 1px solid #DDD;
+    font-family: Monaco, Menlo, Consolas, "Deja Vu Sans Mono", "Courier New", monospace;
+    font-size: 0.85em;
+    overflow: auto;
+}
+
+code {
+  padding: 2px 4px;
+  background-color: #f7f7f9;
+  border: 1px solid #BBB;
+  white-space: nowrap;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+/* pager */
+
+.pager {
+  margin: 24px 0;
+  list-style: none;
+  text-align: center;
+  *zoom: 1;
+}
+
+.pager:before,
+.pager:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.pager:after {
+  clear: both;
+}
+
+ul.pager {
+    padding: 2%;
+    border: 2px dashed #CCC;
+}
+
+.pager li {
+  display: inline;
+}
+
+.pager li > a,
+.pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.pager li > a:hover,
+.pager li > a:focus {
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+.pager .next > a,
+.pager .next > span {
+    float: right;
+}
+
+.pager .previous > a,
+.pager .previous > span {
+    float: left;
+}
+
+/*.pager .previous > a:before,*/
+/*.pager .previous > a:after{*/
+    /*content: '';*/
+    /*height: 0px;*/
+    /*width: 0px;*/
+    /*top: 50%;*/
+    /*right: 100%;*/
+    /*position: absolute;*/
+    /*border: solid transparent;*/
+/*}*/
+
+/*.pager .previous > a:after{*/
+    /*border-right-color: inherit;*/
+    /*border-width: calc(1em - 1px);*/
+    /*margin-top: calc(1px - 1em);*/
+/*}*/
+
+/*.pager .previous > a:before {*/
+    /*border-right-color: red;*/
+    /*border-width: calc(1em + 1px);*/
+    /*margin-top: calc(-1em - 1px);*/
+/*}*/
+
+/*.pager .previous > a:hover:before{*/
+    /*border-color: transparent #CCC;*/
+/*}*/
+
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+    color: #999999;
+    background-color: #fff;
+    cursor: default;
+}
+
+
+/* code block */
+
+/* responsive layout */
+
+
+@media (min-width: 641px) {
+    .body {
+        padding-top: 50px;
+    }
+
+    .container {
+        width: 600px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        width: 780px;
+    }
+
+}
+
+/* ==================================================
+ * New Format for them BNW */
+
+
+/* Index page, time-line style */
+
+/* add the timeline bar */
+#main {
+    position: relative;
+}
+#main::after {
+    content:'';
+    position: absolute;
+    width: 6px;
+    top: 0;
+    height: 100%;
+    left: 15%;
+    background-image: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    z-index: 5;
+}
+
+
+/* the layout of the information of a post-entry */
+.post-entry {
+    display: flex;
+}
+
+.post-time {
+    display: inline-block;
+    flex: none;
+    margin-right: 30px;
+}
+
+.info {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.info .title {
+    flex: none;
+    flex-basis: 100%;
+}
+
+.info .tags {
+    flex: none;
+}
+
+.info .num-of-comments {
+    flex: none;
+}
+
+.info .description {
+    flex: none;
+    flex-basis: 100%;
+}
+
+.tags ul {
+    padding: 0;
+    margin: 0;
+}
+
+.tags ul li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* the circle of an entry on the timeline, it belongs the the 
+ * .info instead of .post-time */
+.info::before, .info::after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+}
+
+.info::before {
+    width: 20px;
+    height: 20px;
+    left: -28px;
+    top: 0;
+    background: red;
+    border-radius: 100%;
+}
+
+.info::after {
+    width: 14px;
+    height: 14px;
+    left: -25px;
+    top: 3px;
+    background: white;
+    border-radius: 100%;
+}
