@@ -211,6 +211,17 @@ footer .container {
     justify-content: space-between;
 }
 
+footer .copyright a,
+footer .copyright a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #f0ae59;
+}
+
+footer .copyright a:hover {
+    border-bottom: 2px solid #8D3F35;
+}
+
 /* time line */
 #index-main container {
     position: relative;
