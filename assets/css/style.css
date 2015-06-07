@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body, html {
     margin: 0;
 }
@@ -264,7 +268,8 @@ footer .copyright a:hover {
     border-radius: 100%;
 }
 /* tagline */
-.tagline {
+.tagline,
+.post-header {
     background: #1B2325;
     color: #FCF9E8;
     padding: 13vh 0;
@@ -272,9 +277,15 @@ footer .copyright a:hover {
     line-height: 1em;
 }
 
-.tagline .container {
+.tagline .container,
+.post-header .container {
     text-align: center;
     font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.post-header .post-meta {
+    font-size: 1rem;
+    font-family: 'Open Sans', 'Microsoft Yahei', "DejaVu Sans", sans-serif;
 }
 
 /* style for post-entry */

@@ -17,8 +17,13 @@
 </%block>
 
 <%block name="content">
-    <div class="post">
-    ${zzz.html_title()}
+    %if title and not post.meta('hidetitle'):
+    <div class="post-header">
+        <div class="container">
+            <div class="title">
+                ${title|h}
+            </div>
+            <div class="post-meta">
         <div class="meta clearfix">
             <div class="authordate left">
                 <time class="timeago" datetime="${post.date.isoformat()}">${post.formatted_date('%Y/%m/%d')}</time>
@@ -27,12 +32,24 @@
             </div>
             ${zzz.html_tags(post)}
         </div>
+            </div>
+        </div>
+    </div>
+    %endif
+    
+    <div id="post-main">
+        <div class="container">
         ${post.text()}
         ${helper.html_pager(post)}
         % if not post.meta('nocomments') and site_has_comments:
             ${comments.comment_form(post.permalink(absolute=True), post.title(), post._base_path)}
         % endif
         ${helper.mathjax_script(post)}
+        </div>
     </div>
-${comments.comment_link_script()}
+    <div class="comment">
+        <div class="container">
+            ${comments.comment_link_script()}
+        </div>
+    </div>
 </%block>
