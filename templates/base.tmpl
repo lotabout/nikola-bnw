@@ -12,11 +12,7 @@ ${template_hooks['extra_head']()}
 </head>
 <body>
     ${header.html_header()}
-    <div class="body">
-        <div id="main" class="container">
-            <%block name="content"></%block>
-        </div>
-    </div>
+    <%block name="content"></%block>
     ${footer.html_footer()}
     ${body_end}
     ${template_hooks['body_end']()}
