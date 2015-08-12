@@ -363,7 +363,7 @@ footer {
 .post-header {
     background: @accent-color;
     color: @primary-color;
-    padding: 13vh 0;
+    padding: 10vh 0;
     font-size: 3em;
     line-height: 1em;
 
@@ -412,6 +412,61 @@ footer .social .social-entry {
     nav a {
 	color: @secondary-color;
 	text-shadow: 1px 1px 1px lighten(@accent-color, 10%);
+    }
+}
+
+/* post */
+.post-header {
+    padding: 10vh 0 5vh 0;
+}
+.post-meta {
+    background: @accent-color;
+    color: @primary-color;
+}
+
+.post-meta .meta {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px dashed @secondary-color;
+
+    .authordate {
+	font-family: monospace;
+	font-size: 0.8em;
+        color: @secondary-color;
+        a {
+            color: @primary-color;
+            background: @accent-color;
+            padding: 2px 4px;
+            &:hover {
+                color: @accent-color;
+                background: @primary-color;
+            }
+        }
+    }
+
+    .post-tags {
+        flex: none;
+
+        &::before {
+            content: "\f02c";
+            font-family: FontAwesome;
+        }
+
+        .tag {
+            display: inline-block;
+
+            a {
+                padding: 2px 8px;
+                position: relative;
+                color: @primary-color;
+                background: @accent-color;
+                font-size: 0.9em;
+                &:hover {
+                    color: @accent-color;
+                    background: @primary-color;
+                }
+            }
+        }
     }
 }
 
