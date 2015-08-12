@@ -1,8 +1,8 @@
 /* Fonts Loading */
-@import url('http://fonts.googleapis.com/css?family=McLaren');
-@import url('http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
-@import url('http://fonts.googleapis.com/css?family=Roboto+Slab');
-@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url(~'http://fonts.googleapis.com/css?family=McLaren');
+@import url(~'http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
+@import url(~'http://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url(~'http://fonts.googleapis.com/css?family=Open+Sans');
 
 @primary-color: #FCF9E8;
 @secondary-color: #F0AE57;
@@ -94,6 +94,9 @@ header {
     }
 
     .brand {
+	position: relative;
+	flex: 1;
+	align-items: center;
 	overflow-y: hidden;
 
 	.logo {
@@ -158,16 +161,9 @@ header {
     padding-top: 60px;
 }
 
-
-/* main content */
-.main {
-    padding-top: 60px;
-    margin-top: -60px;
-}
-
 /* post-entry */
 .post-entry {
-    margin: 35px 0;
+    padding: 20px 0;
     display: flex;
     align-items: center;
 
@@ -184,22 +180,45 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-
-	.post-desc {
-	    flex: 1;
-	    display: flex;
-	    flex-wrap: wrap;
-	    justify-content: space-between;
-	}
-	.post-desc {
-	    flex: 1;
-	    display: flex;
-	    flex-wrap: wrap;
-	    justify-content: space-between;
-	}
-	.num-of-comment {
+	.post-title {
 	    flex: none;
+	    flex-basis: 100%;
+	    .post-title-font();
+	    font-size: 1.1em;
+	    border-bottom: 1px solid rgba(213, 187, 158, 1);
 
+	    a {
+		color: #A4211D;
+		&:hover {
+		    background: #242F32;
+		    color: #F0AE59;
+		    text-shadow: 1px 1px 1px #242F32;
+		}
+	    }
+	}
+
+	.post-tags {
+	    flex: none;
+	    .tag {
+		display: inline-block;
+
+		a {
+		    padding: 0px 8px;
+		    position: relative;
+		    color: @accent-color;
+		    background: @primary-color;
+		    box-shadow: 1px 1px 1px @accent-color;
+		    font-size: 0.9em;
+		    &:hover {
+			color: @primary-color;
+			background: @third-color;
+		    }
+		}
+	    }
+	}
+
+	.num-of-comments {
+	    flex: none;
 	    a {
 		padding: 1px 3px;
 		font-size: 0.8em;
@@ -217,38 +236,7 @@ header {
 	    flex: none;
 	    flex-basis: 100%;
 	}
-
-	.post-tags .tag {
-	    display: inline-block;
-
-	    a {
-		padding: 0px 8px;
-		position: relative;
-		color: @accent-color;
-		background: @primary-color;
-		box-shadow: 1px 1px 1px @accent-color;
-		&:hover {
-		    color: @primary-color;
-		    background: @third-color;
-		}
-	    }
-	}
-
-	.post-title a {
-	    color: #A4211D;
-	}
     }
-
-    .post-title {
-	.post-title-font();
-	font-size: 1.1em;
-	border-bottom: 1px solid rgba(213, 187, 158, 1);
-    }
-    .post-description {
-	padding-left: 2rem;
-    }
-
-
 }
 
 /* footer */
@@ -278,17 +266,19 @@ footer {
 
 
 /* time line */
-#index-main container {
-    position: relative;
-
-    .container::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 6px;
-	background: @accent-color;
-	margin-left: 8rem;
-	opacity: 0.75;
+#index-main {
+    margin: 20px 0;
+    .container {
+	position: relative;
+	&::before {
+	    content: '';
+	    position: absolute;
+	    height: 100%;
+	    width: 6px;
+	    background: @accent-color;
+	    margin-left: 8rem;
+	    opacity: 0.75;
+	}
     }
 
     .post-entry{
@@ -301,7 +291,7 @@ footer {
 		position: absolute;
 		width: 20px;
 		height: 20px;
-		left: calc(8rem - 10px + 3px);
+		left: calc(~'8rem - 10px + 3px');
 		top: calc(0.4rem);
 		background: #A4211D;
 		border-radius: 100%;
@@ -312,8 +302,8 @@ footer {
 		position: absolute;
 		width: 16px;
 		height: 16px;
-		left: calc(8rem - 8px + 3px);
-		top: calc(0.4rem + 2px);
+		left: calc(~'8rem - 8px + 3px');
+		top: calc(~'0.4rem + 2px');
 		background: @primary-color;
 		border-radius: 100%;
 	    }
@@ -408,7 +398,7 @@ footer .social .social-entry {
  * responsive layout */
 @media (max-width: 767px) {
     #index-main .container::before {
-        margin-left: calc(1rem - 3px);
+        margin-left: calc(~'1rem - 3px');
     }
 
     .post-entry {
@@ -425,10 +415,10 @@ footer .social .social-entry {
     }
 
     #index-main .post-entry .post-time::before {
-        left: calc(-1rem - 10px);
+        left: calc(~'-1rem - 10px');
     }
     #index-main .post-entry .post-time::after {
-        left: calc(-1rem - 8px);
+        left: calc(~'-1rem - 8px');
     }
 
     #index-main .post-entry .post-time,
