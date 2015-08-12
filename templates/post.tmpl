@@ -23,19 +23,29 @@
             <div class="title">
                 ${title|h}
             </div>
-            <div class="post-meta">
-        <div class="meta clearfix">
-            <div class="authordate left">
-                <time class="timeago" datetime="${post.date.isoformat()}">${post.formatted_date('%Y/%m/%d')}</time>
-            ${zzz.html_translations(post)}
-            ${zzz.html_sourcelink()}
-            </div>
-            ${zzz.html_tags(post)}
-        </div>
-            </div>
         </div>
     </div>
     %endif
+
+    <div class="post-meta">
+      <div class="container">
+	<div class="meta clearfix">
+	  <div class="authordate">
+	    <time class="timeago" datetime="${post.date.isoformat()}">${post.formatted_date('%Y/%m/%d')}</time>
+	    ${zzz.html_translations(post)}
+	    ${zzz.html_sourcelink()}
+	  </div>
+	  <div class="post-tags">
+	    %for tag in post.tags:
+	    <div class="tag">
+	      <a href="${_link('tag', tag)}" rel="tag">${tag}</a>
+	    </div>
+	    %endfor
+	  </div>
+	</div>
+      </div>
+    </div>
+    
     
     <div id="post-main">
         <div class="container">
