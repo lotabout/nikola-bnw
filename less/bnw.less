@@ -39,6 +39,11 @@
     font-family: 'Roboto Slab', 'Microsoft Yahei', "DejaVu Sans", serif;
 }
 
+.code-font() {
+    font-family: Monaco,Menlo,Consolas,"Deja Vu Sans Mono","Courier New",monospace;
+    font-size: 0.85em;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -468,6 +473,32 @@ footer .social .social-entry {
             }
         }
     }
+}
+
+/* post main content */
+#post-main {
+    h1, h2, h3, h4, h5, h6 {
+        border-bottom: 1px solid lighten(@accent-color, 30%);
+    }
+
+    a {
+        padding: 2px;
+        color: saturate(lighten(@accent-color, 20%), 20%);
+        &:hover {
+            color: @primary-color;
+            background-color: @accent-color;
+        }
+    }
+}
+
+/* code related, put it in top level, so that it can be overwritten */
+
+pre {
+    border: 1px solid lighten(@accent-color, 30%);
+    background: mix(@secondary-color, @primary-color, 50%);
+    padding: 10px;
+    overflow: auto;
+    .code-font();
 }
 
 /*==================================================
