@@ -48,10 +48,10 @@ Change them to whatever you like.
 
 # Screencast
 Well, the index page
-![](https://github.com/lotabout/zzz/blob/master/images-for-readme/index-page.png)
+![](https://github.com/lotabout/nikola-bnw/blob/master/images-for-readme/index-page.png)
 
 The Post Page(half)
-![](https://github.com/lotabout/zzz/blob/master/images-for-readme/post-page.png)
+![](https://github.com/lotabout/nikola-bnw/blob/master/images-for-readme/post-page.png)
 
 # LICENSE
 MIT License
