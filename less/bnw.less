@@ -113,11 +113,13 @@ header {
 		margin: 0px 8px;
 		border-bottom: 3px solid fadeout(@primary-color, 30%);
 		transition: all 0.3s ease;
+                text-shadow: 1px 1px 1px lighten(@accent-color, 10%);
+		color: @secondary-color;
 
 		&:hover {
                     background: @primary-color;
-		    box-shadow: inset 0px -16px 12px -12px white;
-		    color: white;
+                    text-shadow: none;
+		    color: @accent-color;
 		}
 	    }
 	}
@@ -138,6 +140,8 @@ header {
 
 	a,
 	a:focus {
+	    color: @secondary-color;
+	    text-shadow: 1px 1px 1px lighten(@accent-color, 10%);
 	    text-decoration: none;
 	    outline: 0;
 	}
@@ -187,8 +191,22 @@ header {
     }
 }
 
+#header.headroom {
+    transform: translateY(0);
+    transition: all 0.25s ease;
+}
+
+#header.headroom--unpinned{
+    transform: translateY(-100%);
+}
+
+#header.headroom--pinned{
+    transform: translateY(0);
+}
+
 .header-padding {
     padding-top: 60px;
+    background-color: @accent-color;
 }
 
 /* post-entry */
@@ -413,14 +431,6 @@ footer .social .social-entry {
 ::-moz-selection {
     background: lighten(@accent-color, 20%);
     color: @primary-color;
-}
-
-.navbar .container {
-    .brand a,
-    nav a {
-	color: @secondary-color;
-	text-shadow: 1px 1px 1px lighten(@accent-color, 10%);
-    }
 }
 
 /* post */
