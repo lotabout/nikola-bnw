@@ -68,7 +68,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 
-    #index-main {
+    .main {
         flex: 2;
     }
 
@@ -386,6 +386,7 @@ footer {
 
 /* tagline */
 .tagline,
+.meta-header,
 .post-header {
     background: @accent-color;
     color: @primary-color;
@@ -442,24 +443,26 @@ footer .social .social-entry {
     color: @primary-color;
 }
 
-.post-meta .meta {
+.meta {
     display: flex;
     justify-content: space-around;
     border-top: 1px dashed @secondary-color;
+    padding: 2px 0px;
+    font-size: 1rem;
+
+    a {
+        color: @primary-color;
+        background: @accent-color;
+        padding: 2px 4px;
+        &:hover {
+            color: @accent-color;
+            background: @primary-color;
+        }
+    }
 
     .authordate {
 	font-family: monospace;
-	font-size: 0.8em;
         color: @secondary-color;
-        a {
-            color: @primary-color;
-            background: @accent-color;
-            padding: 2px 4px;
-            &:hover {
-                color: @accent-color;
-                background: @primary-color;
-            }
-        }
     }
 
     .post-tags {
@@ -476,20 +479,14 @@ footer .social .social-entry {
             a {
                 padding: 2px 8px;
                 position: relative;
-                color: @primary-color;
-                background: @accent-color;
-                font-size: 0.9em;
-                &:hover {
-                    color: @accent-color;
-                    background: @primary-color;
-                }
             }
         }
     }
 }
 
 /* post main content */
-#post-main {
+#post-main,
+#category-tag {
     h1, h2, h3, h4, h5, h6 {
         border-bottom: 1px solid lighten(@accent-color, 30%);
         .post-header-font();
@@ -538,6 +535,30 @@ blockquote {
     margin: 2em;
     h1,h2,h3,h4,h5,h6 {
         border: none;
+    }
+}
+
+/* tag page */
+.postlist {
+    .listdate {
+	font-family: monospace;
+        font-size: 1rem;
+    }
+
+    a {
+        color: @accent-color;
+        background: @primary-color;
+        padding: 2px 4px;
+        &:hover {
+            color: @primary-color;
+            background: @accent-color;
+        }
+    }
+
+    li {
+        time {
+            padding-right: 20px;
+        }
     }
 }
 
