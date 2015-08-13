@@ -14,6 +14,9 @@ order to make this theme work, you have to
 2. And you have to install external tool [less](http://lesscss.org/)
    by yourself. (`npm install -g less`)
 
+Also note that the theme use `flexbox` CSS attribute, so make sure to
+use modern browser if it is not working well.
+
 # Tweak
 ## Footer
 The footer can include several icons(email, github, twitter, rss) according to
