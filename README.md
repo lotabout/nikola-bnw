@@ -1,4 +1,4 @@
-Well, I call this theme nikola-bnw(brand new world). No special
+Well, I call this theme nikola-bnw(brave new world). No special
 meaning. It is hosted on [Github](https://github.com/lotabout/nikola-bnw.git).
 
 # How to use it
@@ -14,8 +14,22 @@ order to make this theme work, you have to
 2. And you have to install external tool [less](http://lesscss.org/)
    by yourself. (`npm install -g less`)
 
+Update: I've generated the css written by `less`, so you don't need to
+install `less` now, just do:
+1. Modify your `confiy.py` and set `USE_BUNDLES = True`.
+2. Done!
+
 Also note that the theme use `flexbox` CSS attribute, so make sure to
 use modern browser if it is not working well.
+
+# Another way to Install it
+The theme had been added to
+[Nikola Theme Gallary](https://themes.getnikola.com/), so you can install
+it by:
+1. `nikola install_theme bnw`
+2. Modify your conf.py and set `THEME = "bnw"`
+3. Modify your `confiy.py` and set `USE_BUNDLES = True`.
+4. Done!
 
 # Tweak
 ## Footer
