@@ -1,4 +1,4 @@
-This repository is now managed [nikola-themes](https://github.com/getnikola/nikola-themes/tree/master/v7/bnw) directly. This repository is not longer maintained since I stop using nikola. Good Luck :)
+This repository is now managed by [nikola-themes](https://github.com/getnikola/nikola-themes/tree/master/v7/bnw) directly. This repository is not longer maintained since I stop using nikola. Good Luck :)
 
 
 Well, I call this theme nikola-bnw(brave new world). No special
